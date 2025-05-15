@@ -34,3 +34,17 @@ Intel provides simulators and kernels—but not a tool to **compare their perfor
    ```bash
    git clone https://github.com/yourusername/qbench.git
    cd qbench
+
+
+
+## run code
+in terminal:
+   cd ~/Desktop/qbench  # or wherever your project is
+   docker run -it --rm -v $PWD:/workspace intellabs/intel_quantum_sdk:latest
+
+inside container:
+   cd /workspace
+   python3 qbench.py qasm/grover.qpp
+
+What's next:
+    View a summary of image vulnerabilities and recommendations → docker scout quickview intellabs/intel_quantum_sdk:latest
